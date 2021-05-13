@@ -10,19 +10,19 @@
     <img src="assets/logo.png" alt="Logo" width="150" height="150">
   </a>
   
-  <h3 align="center">Discord Nitro Generator and Checker</h3>
+  <h3 align="center">Mass Dm Self Bot</h3>
 
   <p align="center">
-    A discord nitro generator and checker for all your nitro needs
+    A discord Mass Dm bot
     <br />
-    <a href="https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/logicguy1/Mass-Dm-Self-Bot"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker/issues">Report Bug</a>
+    <a href="https://github.com/logicguy1/Mass-Dm-Self-Bot/issues">Report Bug</a>
     ·
-    <a href="https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker/issues">Request Feature</a>
+    <a href="https://github.com/logicguy1/Mass-Dm-Self-Bot/issues">Request Feature</a>
       ·
-    <a href="https://discord.gg/rchHUU9aGk">Join the discord</a>
+    <a href="https://discord.gg/anon">Join the discord</a>
   </p>
 </p>
   
@@ -72,7 +72,7 @@ You need to install Python, that can be done [here](https://www.python.org)
 ### Installation
 1. Clone the repo
    ```sh
-   git clone https://github.com/logicguy1/The-all-in-one-discord-tool.git
+   git clone https://github.com/logicguy1/Mass-Dm-Self-Bot.git
    ```
 2. Install Python packages
    ```sh
@@ -89,7 +89,7 @@ You need to install Python, that can be done [here](https://www.python.org)
    
 #### Or this can be done using android with unrooted Termux
 ```
-git clone https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker
+git clone https://github.com/logicguy1/Mass-Dm-Self-Bot
 pkg install python
 pip install discord_webhooks
 pip install requests
@@ -112,7 +112,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-See the [open issues](https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/logicguy1/Mass-Dm-Self-Bot/issues) for a list of proposed features (and known issues).
 
 ## Contributing
 
@@ -131,10 +131,5 @@ Contributions are what make the open source community such an amazing place to l
 
 Logicguy - [@Drillenissen#4268](https://www.discordapp.com) - logicguy.mailandcontact@gmail.com
 
-Project Link: [https://github.com/logicguy1/The-all-in-one-discord-tool](https://github.com/logicguy1/The-all-in-one-discord-tool)
+Project Link: [https://github.com/logicguy1/The-all-in-one-discord-tool](https://github.com/logicguy1/Mass-Dm-Self-Bot)
 
-<!-- Statistics -->  
-
-<p>
-<img src=https://komarev.com/ghpvc/?username=Drillenissen />
-</p>
