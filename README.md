@@ -58,9 +58,7 @@ It generates and checks discord nitro codes at the same time for maximum efficie
 
 ### Built With
 
-* [Requests](https://github.com/psf/requests)
-* [Discord webhook](https://github.com/lovvskillz/python-discord-webhook)
-* [Colored](https://gitlab.com/dslackw/colored)
+* [discord.py](https://github.com/Rapptz/discord.py)
 
 ## Getting Started
 
@@ -77,35 +75,24 @@ You need to install Python, that can be done [here](https://www.python.org)
 2. Install Python packages
    ```sh
    # Windows:
-   py -3 -m pip install requests
-   py -3 -m pip install discord_webhook
-   py -3 -m pip install colored
+   py -3 -m pip install -U discord.py
    
    # Unix
-   python3.8 -m pip install requests
-   python3.8 -m pip install discord_webhook
-   python3.8 -m pip install colored
+   python3 -m pip install -U discord.py
    ```
    
 #### Or this can be done using android with unrooted Termux
 ```
 git clone https://github.com/logicguy1/Mass-Dm-Self-Bot
-pkg install python
-pip install discord_webhooks
-pip install requests
-cd Discord-Nitro-Generator-and-Checker
+python3 -m pip install -U discord.py
+cd Mass-Dm-Self-Bot
 python3 main.py
 ```
    
 ## Usage
 
-Run the `main.py` file using `py -3 main.py` 
-The code will show you two prompts:
-1. How many codes to generate 
-2. If you want to use a discord webhook, if you dont know how to get a discord webhook url it is located at   
-   ```channel settings » intergrations » webhooks » create webhook```  
-   If you dont want to use a webhook simply leave this blank  
-
+Run the `captureIds.py` file using `py -3 captureIds.py` 
+It will listen to any events that happen in any of the servers the user account is linked to, this includes `messages`, `reactions` and `user profile updates` you can wait to a giveaway 
 The code will start generating and checking after that step
 
 _For more examples, please refer to the [Documentation](https://example.com)_
