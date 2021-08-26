@@ -14,9 +14,9 @@ async def on_ready():
     indx = 0
     for i in data:
         indx += 1
-        memberSussyBaka = await bot.fetch_user(i)
+        member = await bot.fetch_user(i)
         try:
-            await memberSussyBaka.send("YOUR MESSAGE HERE")
+            await member.send("YOUR MESSAGE HERE")
             print(f" [+] Sent message {indx} / {len(data)}")
         except Exception as e:
             print(f" [!] {e}")
