@@ -22,7 +22,7 @@
     ·
     <a href="https://github.com/logicguy1/Mass-Dm-Self-Bot/issues">Request Feature</a>
       ·
-    <a href="https://discord.gg/anon">Join the discord</a>
+    <a href="https://www.anonix.xyz/discord">Join the discord</a>
   </p>
 </p>
   
