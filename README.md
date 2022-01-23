@@ -58,7 +58,7 @@ It generates and checks discord nitro codes at the same time for maximum efficie
 
 ### Built With
 
-* [discord.py](https://github.com/Rapptz/discord.py)
+* [discord.py 1.6.0](https://github.com/Rapptz/discord.py)
 
 ## Getting Started
 
@@ -75,16 +75,16 @@ You need to install Python, that can be done [here](https://www.python.org)
 2. Install Python packages
    ```sh
    # Windows:
-   py -3 -m pip install -U discord.py
+   py -3 -m pip install discord.py==1.6.0
    
    # Unix
-   python3 -m pip install -U discord.py
+   python3 -m pip install discord.py==1.6.0
    ```
    
 #### Or this can be done using android with unrooted Termux
 ```
 git clone https://github.com/logicguy1/Mass-Dm-Self-Bot
-python3 -m pip install -U discord.py
+python3 -m pip install discord.py==1.6.0
 cd Mass-Dm-Self-Bot
 python3 main.py
 ```
