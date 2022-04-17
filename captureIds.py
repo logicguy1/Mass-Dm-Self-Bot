@@ -8,11 +8,11 @@ try:
 except Exception as e:
     print(f" [!] {e}")
 
-    prompt = input(" Reset ids.json? (y/n)\n > ").strip()[0].lower()
+    prompt = input(" [?] Reset ids.json? (y/n): ").strip().lower()
     while prompt not in ("y", "n"):  # Ignore invalid input
-        prompt = input(" Reset ids.json? (y/n)\n > ").strip()[0].lower()
+        prompt = input(" [?] Reset ids.json? (y/n): ").strip().lower()
 
-    if prompt == "y":
+    if prompt[0] == "y":
         with open("ids.json", "w") as file:
             data = []
             json.dump(data, file)
@@ -33,7 +33,7 @@ def log_id(member):
 
 
 client = discord.Client()
-token = input(" Enter your token\n > ")
+token = input(" [?] Enter your token: ")
 
 
 @client.event
