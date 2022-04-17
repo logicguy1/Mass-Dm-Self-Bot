@@ -55,12 +55,12 @@ async def on_member_join(member):
 
 
 @client.event
-async def on_member_update(before, after):
+async def on_member_update(_, after):
     log_id(after.member)
 
 
 @client.event
-async def on_voice_state_update(member, before, after):
+async def on_voice_state_update(member, _, _):
     log_id(member)
 
 
