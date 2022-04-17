@@ -21,4 +21,6 @@ async def on_ready():
 
     print(" [+] Done")
 
+    await client.close() # Close bot
+
 client.run("", bot = False)
