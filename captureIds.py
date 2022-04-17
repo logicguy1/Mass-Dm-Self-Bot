@@ -4,7 +4,11 @@ import json
 with open("ids.json", "r") as file:
     data = json.load(file)
 
-def log_id(user_id):
+def log_id(member):
+    if member.bot: # Skip bots
+        return
+
+    user_id = member.id
     if user_id not in data:
         data.append(user_id)
 
@@ -22,27 +26,22 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if not message.author.bot:
-        log_id(message.author.id)
+    log_id(message.author)
 
 @client.event
 async def on_raw_reaction_add(payload):
-    if not payload.member.bot:
-        log_id(payload.member.id)
+    log_id(payload.member)
 
 @client.event
 async def on_member_join(member):
-    if not member.bot:
-        log_id(member.id)
+    log_id(member)
 
 @client.event
 async def on_member_update(before, after):
-    if not after.member.bot:
-        log_id(after.member.id)
+    log_id(after.member)
 
 @client.event
 async def on_voice_state_update(member, before, after):
-    if not member.bot:
-        log_id(member.id)
+    log_id(member)
 
 client.run(token, bot = False)
