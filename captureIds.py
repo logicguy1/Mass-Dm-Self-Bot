@@ -11,7 +11,7 @@ def log_id(id):
         with open("ids.json", "w") as file:
             json.dump(data, file)
 
-        print(" [+]", id, "Total:", len(data))
+        print(f" [+] {id} Total: {len(data)}")
 
 client = discord.Client()
 token = input("Enter your token\n> ")
