@@ -6,7 +6,7 @@ try:
         data = json.load(file)
 except Exception as e:
     print(f" [!] {e}")
-    prompt = input("Reset ids.json? (y/n)\n> ").strip()[0].lower()
+    prompt = input(" Reset ids.json? (y/n)\n> ").strip()[0].lower()
     while prompt not in ("y", "n"): # Ignore invalid input
         prompt = input("Reset ids.json? (y/n)\n> ").strip()[0].lower()
 
@@ -29,7 +29,7 @@ def log_id(member):
         print(f" [+] {user_id} Total: {len(data)}")
 
 client = discord.Client()
-token = input("Enter your token\n> ")
+token = input(" Enter your token\n> ")
 
 @client.event
 async def on_ready():
