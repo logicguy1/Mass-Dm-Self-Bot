@@ -11,13 +11,11 @@ async def on_ready():
     with open("ids.json", "r") as file:
         data = json.load(file)
 
-    indx = 0
-    for i in data:
-        indx += 1
-        member = await bot.fetch_user(i)
+    for index, user_id in enumerate(data):
+        member = await bot.fetch_user(user_id)
         try:
             await member.send("YOUR MESSAGE HERE")
-            print(f" [+] Sent message {indx} / {len(data)}")
+            print(f" [+] Sent message {index + 1} / {len(data)}")
         except Exception as e:
             print(f" [!] {e}")
 
