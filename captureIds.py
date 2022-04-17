@@ -4,8 +4,10 @@ import json
 try:
     with open("ids.json", "r") as file:
         data = json.load(file)
+
 except Exception as e:
     print(f" [!] {e}")
+
     prompt = input(" Reset ids.json? (y/n)\n> ").strip()[0].lower()
     while prompt not in ("y", "n"):  # Ignore invalid input
         prompt = input(" Reset ids.json? (y/n)\n> ").strip()[0].lower()
