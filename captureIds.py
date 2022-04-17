@@ -1,10 +1,10 @@
 import discord
 import json
 
-def log_id(id):
-    with open("ids.json", "r") as file:
-        data = json.load(file)
+with open("ids.json", "r") as file:
+    data = json.load(file)
 
+def log_id(id):
     if id not in data:
         data.append(id)
 
