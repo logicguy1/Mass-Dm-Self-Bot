@@ -2,6 +2,7 @@ import discord
 import json
 
 client = discord.Client()
+message = input("Enter your message\n> ")
 
 @client.event
 async def on_ready():
@@ -13,7 +14,7 @@ async def on_ready():
     for index, user_id in enumerate(data):
         member = await client.fetch_user(user_id)
         try:
-            await member.send("YOUR MESSAGE HERE")
+            await member.send(message)
             print(f" [+] Sent message {index + 1} / {len(data)}")
         except Exception as e:
             print(f" [!] {e}")
