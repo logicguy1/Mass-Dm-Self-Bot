@@ -4,14 +4,14 @@ import json
 with open("ids.json", "r") as file:
     data = json.load(file)
 
-def log_id(id):
-    if id not in data:
-        data.append(id)
+def log_id(user_id):
+    if user_id not in data:
+        data.append(user_id)
 
         with open("ids.json", "w") as file:
             json.dump(data, file)
 
-        print(f" [+] {id} Total: {len(data)}")
+        print(f" [+] {user_id} Total: {len(data)}")
 
 client = discord.Client()
 token = input("Enter your token\n> ")
