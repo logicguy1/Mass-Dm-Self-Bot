@@ -15,6 +15,7 @@ def log_id(id):
         print(" [+]", id, "Total:", len(data))
 
 bot = commands.Bot(command_prefix='?')
+token = input("Enter your token\n> ")
 
 @bot.event
 async def on_ready():
@@ -45,4 +46,4 @@ async def on_voice_state_update(member, before, after):
     if not member.bot:
         log_id(member.id)
 
-bot.run("", bot = False)
+bot.run(token, bot = False)
