@@ -2,6 +2,7 @@ import discord
 import json
 
 client = discord.Client()
+token = input("Enter your token\n> ")
 message = input("Enter your message\n> ")
 
 @client.event
@@ -23,4 +24,4 @@ async def on_ready():
 
     await client.close() # Close bot
 
-client.run("", bot = False)
+client.run(token, bot = False)
