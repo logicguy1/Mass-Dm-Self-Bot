@@ -1,10 +1,9 @@
 import discord
-from discord.ext import commands
 import json
 
-bot = commands.Bot(command_prefix='?')
+client = discord.Client()
 
-@bot.event
+@client.event
 async def on_ready():
     print(' [!] Started Dmming Ids\n')
 
@@ -12,7 +11,7 @@ async def on_ready():
         data = json.load(file)
 
     for index, user_id in enumerate(data):
-        member = await bot.fetch_user(user_id)
+        member = await client.fetch_user(user_id)
         try:
             await member.send("YOUR MESSAGE HERE")
             print(f" [+] Sent message {index + 1} / {len(data)}")
