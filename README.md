@@ -83,4 +83,4 @@ Contributions are what make the open source community such an amazing place to l
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-Project Link: [https://github.com/logicguy1/The-all-in-one-discord-tool](https://github.com/logicguy1/Mass-Dm-Self-Bot)
+Project Link: [https://github.com/logicguy1/Mass-Dm-Self-Bot](https://github.com/logicguy1/Mass-Dm-Self-Bot)
