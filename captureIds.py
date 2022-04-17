@@ -8,7 +8,7 @@ except Exception as e:
     print(f" [!] {e}")
     prompt = input(" Reset ids.json? (y/n)\n> ").strip()[0].lower()
     while prompt not in ("y", "n"): # Ignore invalid input
-        prompt = input("Reset ids.json? (y/n)\n> ").strip()[0].lower()
+        prompt = input(" Reset ids.json? (y/n)\n> ").strip()[0].lower()
 
     if prompt == "y":
         with open("ids.json", "w") as file:
