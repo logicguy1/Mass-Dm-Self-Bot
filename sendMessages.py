@@ -2,8 +2,8 @@ import discord
 import json
 
 client = discord.Client()
-token = input(" Enter your token\n> ")
-message = input(" Enter your message\n> ")
+token = input(" Enter your token\n > ")
+message = input(" Enter your message\n > ")
 
 
 @client.event
