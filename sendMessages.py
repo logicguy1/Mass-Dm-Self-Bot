@@ -5,9 +5,10 @@ client = discord.Client()
 token = input(" Enter your token\n> ")
 message = input(" Enter your message\n> ")
 
+
 @client.event
 async def on_ready():
-    print(' [!] Started Dmming Ids\n')
+    print(" [!] Started Dmming Ids\n")
 
     with open("ids.json", "r") as file:
         data = json.load(file)
@@ -22,6 +23,7 @@ async def on_ready():
 
     print(" [+] Done")
 
-    await client.close() # Close bot
+    await client.close()  # Close bot
 
-client.run(token, bot = False)
+
+client.run(token, bot=False)
