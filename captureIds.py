@@ -1,48 +1,70 @@
 import discord
-from discord.ext import commands
 import json
 
-def log_id(id):
+try:
     with open("ids.json", "r") as file:
         data = json.load(file)
 
-    if id not in data:
-        data.append(id)
+except Exception as e:
+    print(f" [!] {e}")
+
+    prompt = input(" [?] Reset ids.json? (y/n): ").strip().lower()
+    while prompt not in ("y", "n"):  # Ignore invalid input
+        prompt = input(" [?] Reset ids.json? (y/n): ").strip().lower()
+
+    if prompt[0] == "y":
+        with open("ids.json", "w") as file:
+            data = []
+            json.dump(data, file)
+
+
+def log_id(member):
+    if member.bot:  # Skip bots
+        return
+
+    user_id = member.id
+    if user_id not in data:
+        data.append(user_id)
 
         with open("ids.json", "w") as file:
             json.dump(data, file)
 
-        print(" [+]", id, "Total:", len(data))
+        print(f" [+] {user_id} Total: {len(data)}")
 
-bot = commands.Bot(command_prefix='?')
 
-@bot.event
+client = discord.Client()
+token = input(" [?] Enter your token: ")
+
+
+@client.event
 async def on_ready():
-    print(' [!] Started logging ids\n')
+    print(" [!] Started logging ids\n")
 
-@bot.event
+
+@client.event
 async def on_message(message):
-    if not message.author.bot:
-        log_id(message.author.id)
+    log_id(message.author)
 
-@bot.event
+
+@client.event
 async def on_raw_reaction_add(payload):
-    if not payload.member.bot:
-        log_id(payload.member.id)
+    log_id(payload.member)
 
-@bot.event
+
+@client.event
 async def on_member_join(member):
-    if not member.bot:
-        log_id(member.id)
+    log_id(member)
 
-@bot.event
-async def on_member_update(before, after):
-    if not after.member.bot:
-        log_id(after.member.id)
 
-@bot.event
-async def on_voice_state_update(member, before, after):
-    if not member.bot:
-        log_id(member.id)
+@client.event
+async def on_member_update(_, after):
+    print(after)
+    log_id(after.member)
 
-bot.run("", bot = False)
+
+@client.event
+async def on_voice_state_update(member, _, __):
+    log_id(member)
+
+
+client.run(token, bot=False)

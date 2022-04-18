@@ -1,26 +1,29 @@
 import discord
-from discord.ext import commands
 import json
 
-bot = commands.Bot(command_prefix='?')
+client = discord.Client()
+token = input(" [?] Enter your token: ")
+message = input(" [?] Enter your message: ")
 
-@bot.event
+
+@client.event
 async def on_ready():
-    print(' [!] Started Dmming Ids\n')
+    print(" [!] Started Dmming Ids\n")
 
     with open("ids.json", "r") as file:
         data = json.load(file)
 
-    indx = 0
-    for i in data:
-        indx += 1
-        member = await bot.fetch_user(i)
+    for index, user_id in enumerate(data):
+        member = await client.fetch_user(user_id)
         try:
-            await member.send("YOUR MESSAGE HERE")
-            print(f" [+] Sent message {indx} / {len(data)}")
+            await member.send(message)
+            print(f" [+] Sent message {index + 1} / {len(data)}")
         except Exception as e:
             print(f" [!] {e}")
 
     print(" [+] Done")
 
-bot.run("", bot = False)
+    await client.close()  # Close bot
+
+
+client.run(token, bot=False)
